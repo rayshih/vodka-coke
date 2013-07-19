@@ -29,7 +29,7 @@ switch( command ){
 
   case 'r':
   case 'run':
-    cli.run();
+    cli.run( args );
     exit = false;
 
     break;
