@@ -1,15 +1,15 @@
 {
-  "name"        : "vodka",
-  "version"     : "2.2.1",
-  "description" : "A functional testing framework for web apps",
+  "name"        : "vodka-coke",
+  "version"     : "2.3.0",
+  "description" : "A functional testing framework for web apps for coke",
   "bin"        : {
-    "vodka" : "./bin/vodka",
-    "vdk"   : "./bin/vodka"
+    "vodkac" : "./bin/vodkac",
+    "vdkc"   : "./bin/vodkac"
   },
   "keywords"    : [
     "test", "testing", "functinal test", "restful client"
   ],
-  "author"       : "dreamerslab <ben@dreamerslab.com>",
+  "author"       : "Ray Shih <mnf.shih@gmail.com>",
   "dependencies" : {
     "cli-color"  : "0.2.2",
     "inflection" : "1.2.6",
@@ -25,7 +25,7 @@
   "main"       : "index",
   "repository" : {
     "type"     : "git",
-    "url"      : "https://github.com/dreamerslab/vodka.git"
+    "url"      : "https://github.com/rayshih/vodka-coke.git"
   },
   "engines" : [ "node >= 0.8.0" ],
   "licenses": [{
