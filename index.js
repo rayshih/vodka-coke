@@ -7,8 +7,10 @@ function vodka( base_dir ){
   // expose utils to global
   require( './lib/utils' );
 
+  var logger = UTILS.logger;
+
   // dispatch actions
-  if( CONF.actions === undefined ) return console.log(
+  if( CONF.actions === undefined ) return logger.log(
     UTILS.$alert( 'error' ) + '   actions not specified in config'
   );
 
@@ -45,7 +47,7 @@ function vodka( base_dir ){
   });
 
   outter_flow.end( function (){
-    console.log( UTILS.$good( 'All test passed :)' ));
+    logger.log( UTILS.$good( 'All test passed :)' ));
     process.exit( 0 );
   });
 };
