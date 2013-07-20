@@ -1,7 +1,6 @@
 # VODKA
 
-A functional testing framework best suit for testing json api servers
-
+A functional testing framework best suit for testing json api servers for coke
 
 
 ## Requires
@@ -9,20 +8,18 @@ A functional testing framework best suit for testing json api servers
 Checkout `package.json` for dependencies.
 
 
-
 ## Installation
 
 Install through npm
 
-    npm install vodka -g
-
+    npm install vodka-coke -g
 
 
 ## Usage
 
 ### Command line tools
 
-    Usage: vodka [command] [argument(s)]
+    Usage: vodkac [command] [argument(s)]
 
     Commands:
       -v, --version                Display vodka version
@@ -34,17 +31,28 @@ Install through npm
 > Generate a new test project
 
     $ cd /path/to/the/test/folder/of/your/app
-    $ vodka new your-project-name
+    $ vodkac new your-project-name
 
 > Generate test actions
 
-    $ vodka actions users signup login
+    $ vodkac actions users signup login
 
 > Run test
 
     # in the root dir of the test project
-    $ vodka run
+    $ vodkac run
 
+> Run test without start coke server
+
+	$ vodkac r --without-coke
+
+> To print out the fixture
+
+	$ vodkac r -f
+
+> To log out server message to console ( default to log/development.log )
+
+	$ vodkac r -d
 
 
 ### Tutorial
