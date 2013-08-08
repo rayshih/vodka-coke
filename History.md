@@ -1,5 +1,17 @@
 #History
 
+## 2.3.2 / 2013-8-7
+
+- [update readme] add description about log/test.log
+
+## 2.3.1
+
+- Bug fix
+
+## 2.3.0
+
+- [new feature] fork vodka to vodka-coke
+
 ## 2.2.1 / 2013-6-2
 
 - [update packages] `cli-color`->0.2.2, `inflection`->1.2.6, `node.flow`->1.2.2, `request`->2.21.0, `node.extend`->1.0.7, `should`->1.2.2
