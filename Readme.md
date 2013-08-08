@@ -50,7 +50,7 @@ Install through npm
 
 	$ vodkac r -f
 
-> To log out server message to console ( default to log/development.log )
+> To log out server message to console ( default to file log/test.log )
 
 	$ vodkac r -d
 
