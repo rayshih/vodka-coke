@@ -54,6 +54,10 @@ Install through npm
 
 	$ vodkac r -d
 
+> To see server log with `vodkac r`
+
+    $ tail -f log/test.log
+
 
 ### Tutorial
 
