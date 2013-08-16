@@ -1,5 +1,9 @@
 #History
 
+## 2.3.3 / 2013-8-16
+
+- stringify the object while log to file
+
 ## 2.3.2 / 2013-8-7
 
 - [update readme] add description about log/test.log
