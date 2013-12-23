@@ -1,5 +1,13 @@
 #History
 
+## 2.4.0 / 2013-12-23
+
+- refactor path related stuff
+
+## 2.3.5 / 2013-8-23
+
+- fix -d parameter not work problem while using global install
+
 ## 2.3.3 / 2013-8-16
 
 - stringify the object while log to file

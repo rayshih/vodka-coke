@@ -1,35 +1,55 @@
 {
   "name"        : "vodka-coke",
-  "version"     : "2.3.3",
+  "version"     : "2.4.0",
   "description" : "A functional testing framework for web apps for coke",
   "bin"        : {
     "vodkac" : "./bin/vodkac",
     "vdkc"   : "./bin/vodkac"
   },
   "keywords"    : [
-    "test", "testing", "functinal test", "restful client"
+    "test",
+	"testing",
+	"functinal test",
+	"restful client"
   ],
-  "author"       : "Ray Shih <mnf.shih@gmail.com>",
+  "author"       : {
+	"name": "Ray Shih",
+	"email": "mnf.shih@gmail.com"
+  },
   "dependencies" : {
-    "cli-color"  : "0.2.2",
-    "inflection" : "1.2.6",
-    "node.class" : "1.0.1",
-    "node.flow"  : "1.2.2",
-    "request"    : "2.21.0"
+    "cli-color"  : "0.2.3",
+    "inflection" : "1.3.2",
+    "node.class" : "1.1.4",
+    "node.flow"  : "1.2.3",
+    "request"    : "2.30.0"
   },
   "devDependencies": {
     "express"     : "2.5.11",
-    "node.extend" : "1.0.7",
-    "should"      : "1.2.2"
+    "node.extend" : "1.0.8",
+    "should"      : "2.1.1"
   },
   "main"       : "index",
   "repository" : {
     "type"     : "git",
     "url"      : "https://github.com/rayshih/vodka-coke.git"
   },
-  "engines" : [ "node >= 0.8.0" ],
+  "engines" : [
+	  "node >= 0.8.0"
+  ],
   "licenses": [{
     "type": "MIT",
     "url" : "http://en.wikipedia.org/wiki/MIT_License"
-  }]
+  }],
+  "readme": "# VODKA\n\nA functional testing framework best suit for testing json api servers for coke\n\n\n## Requires\n\nCheckout `package.json` for dependencies.\n\n\n## Installation\n\nInstall through npm\n\n    npm install vodka-coke -g\n\n\n## Usage\n\n### Command line tools\n\n    Usage: vodkac [command] [argument(s)]\n\n    Commands:\n      -v, --version                Display vodka version\n      h,  help                    Display usage information\n      n,  new [project]            Create a new test project\n      g,  generate [file] [method] Generate code templates\n      r,  run                      Run tests\n\n> Generate a new test project\n\n    $ cd /path/to/the/test/folder/of/your/app\n    $ vodkac new your-project-name\n\n> Generate test actions\n\n    $ vodkac actions users signup login\n\n> Run test\n\n    # in the root dir of the test project\n    $ vodkac run\n\n> Run test without start coke server\n\n\t$ vodkac r --without-coke\n\n> To print out the fixture\n\n\t$ vodkac r -f\n\n> To log out server message to console ( default to file log/test.log )\n\n\t$ vodkac r -d\n\n> To see server log with `vodkac r`\n\n    $ tail -f log/test.log\n\n\n### Tutorial\n\n> Define your configuration in `configs`\n\n    module.exports = {\n      root    : 'http://127.0.0.1:4000',\n      timeout : 60000, // 1 min,\n      // add to this array if you have others route files that needs to split out\n      routes  : [ 'default' ]\n    };\n\n> Define your routes in `routes/default` with `node.flow`\n\n    var Flow = require( 'node.flow' );\n\n    module.exports = function ( map, out ){\n      flow.series( function ( next ){\n        map.get( 'url/users/', 'action_file_name#function_name', next );\n      });\n    };\n\n> Add your action in `actions/action_file_name`\n\n    module.exports = {\n      function_name : function ( args, next , log ){\n        return {\n          headers : {},\n          json    : {},\n          handler : function ( err, res, body ){\n            log( 'bla bla bla' );\n          }\n        };\n      },\n    };\n\n> Please visit [Request -- Simplified HTTP request method](https://github.com/mikeal/request) for detail\n\n\n### Globals\n\n- CONF\n    - base_dir\n    - action_dir\n    - data_dir\n    - root\n    - timeout\n    - routes\n\n> Plus custom configs in `configs.js`\n\n- UTILS\n    - $update\n    - $good\n    - $fine\n    - $alert\n    - regex\n        - begin_slash\n        - has_format\n        - has_none_characters\n        - is_js_file\n        - is_email\n        - tail_slash\n        - url\n    - ran_no\n    - typeof\n    - uid\n\n> Check the source for detail\n\n\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2012 dreamerslab &lt;ben@dreamerslab.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/rayshih/vodka-coke/issues"
+  },
+  "homepage": "https://github.com/rayshih/vodka-coke",
+  "_id": "vodka-coke@2.3.5",
+  "dist": {
+    "shasum": "529c42d09dd23279b120e16e9edc49972aeb87c5"
+  },
+  "_from": "vodka-coke@2.3.5",
+  "_resolved": "https://registry.npmjs.org/vodka-coke/-/vodka-coke-2.3.5.tgz"
 }

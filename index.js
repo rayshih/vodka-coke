@@ -11,7 +11,7 @@ function vodka( base_dir ){
 
   // dispatch actions
   if( CONF.actions === undefined ) return logger.log(
-    UTILS.$alert( 'error' ) + '   actions not specified in config'
+    UTILS.$alert( 'error' ) + '  actions not specified in config'
   );
 
   if( UTILS.is( CONF.actions ) !== 'array' ){
@@ -25,7 +25,7 @@ function vodka( base_dir ){
 
   CONF.actions.forEach( function ( file_name ){
     outter_flow.series( function ( outter_next ){
-      var Action          = require( VODKA_ACTION_DIR + file_name );
+      var Action          = require( VODKA_ACTION_DIR + '/' + file_name );
       var client          = new Client( file_name );
       var action_instance = new Action( client );
       var flow            = new Flow();
@@ -50,7 +50,7 @@ function vodka( base_dir ){
     logger.log( UTILS.$good( 'All test passed :)' ));
     process.exit( 0 );
   });
-};
+}
 
 vodka.version = JSON.parse( fs.readFileSync( __dirname + '/package.json', 'utf8' )).version;
 
