@@ -1,5 +1,9 @@
 #History
 
+## 2.4.1 / 2013-12-23
+
+- fix test
+
 ## 2.4.0 / 2013-12-23
 
 - refactor path related stuff
