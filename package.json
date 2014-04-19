@@ -1,6 +1,6 @@
 {
   "name"        : "vodka-coke",
-  "version"     : "2.4.1",
+  "version"     : "2.4.2",
   "description" : "A functional testing framework for web apps for coke",
   "bin"        : {
     "vodkac" : "./bin/vodkac",

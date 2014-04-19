@@ -1,5 +1,9 @@
 #History
 
+## 2.4.2 / 2013-4-19
+
+- make global CONF changable
+
 ## 2.4.1 / 2013-12-23
 
 - fix test
